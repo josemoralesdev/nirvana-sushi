@@ -150,7 +150,6 @@ export default function Header() {
   }
   `);
   const image = getImage(data.allImageSharp.nodes[0]);
-  console.log(image)
 
   const [isOpen, setIsOpen] = useState(false)
 
