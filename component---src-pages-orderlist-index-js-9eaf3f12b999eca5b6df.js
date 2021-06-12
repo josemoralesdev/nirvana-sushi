@@ -1,0 +1,2 @@
+(self.webpackChunknirvana_sushi=self.webpackChunknirvana_sushi||[]).push([[132],{9896:function(e,n,r){"use strict";r.r(n);var a=r(7294),s=r(2958);n.default=function(){return a.createElement(a.Fragment,null,a.createElement(s.Z,{title:"Lista de Órdenes | Nirvana Sushi"}),"Work in progress")}}}]);
+//# sourceMappingURL=component---src-pages-orderlist-index-js-9eaf3f12b999eca5b6df.js.map

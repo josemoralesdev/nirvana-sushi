@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://nirvana-sushi/./src/pages/orderlist/index.js"],"names":[],"mappings":"wIAUA,UARA,WACC,OACC","file":"component---src-pages-orderlist-index-js-351f298bb5b4d5317973.js","sourcesContent":["import React from 'react'\n\nfunction OrderList() {\n\treturn (\n\t\t<>\n\t\t\tWork in progress\n\t\t</>\n\t)\n}\n\nexport default OrderList\n"],"sourceRoot":""}
