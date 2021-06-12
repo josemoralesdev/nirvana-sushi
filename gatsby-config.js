@@ -1,8 +1,10 @@
 module.exports = {
   pathPrefix: "/nirvana-sushi",
   siteMetadata: {
-    title: "Nirvana",
-    siteUrl: `https:localhost:8000`,
+    title: "Nirvana Sushi",
+    siteUrl: `https://josemoralesdev.github.io/nirvana-sushi/`,
+    url: `https://josemoralesdev.github.io/nirvana-sushi`,
+    description: `Menú digital de Nirvana Sushi`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
