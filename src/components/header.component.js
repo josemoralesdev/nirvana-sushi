@@ -144,10 +144,11 @@ export default function Header() {
   query LogoBlack {
     allImageSharp(filter: {fixed: {originalName: {regex: "/nirvana-black/"}}}) {
       nodes {
-        gatsbyImageData(width: 90)
+        gatsbyImageData(width: 90, placeholder: NONE)
       }
     }
   }
+  
   `);
   const image = getImage(data.allImageSharp.nodes[0]);
 
