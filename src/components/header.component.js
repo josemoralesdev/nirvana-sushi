@@ -142,13 +142,12 @@ const LinkWrapper = styled.div`
 export default function Header() {
   const data = useStaticQuery(graphql`
   query LogoBlack {
-    allImageSharp(filter: {fixed: {originalName: {regex: "/nirvana-black/"}}}) {
+    allImageSharp(filter: {original: {src: {regex: "/nirvana-black/"}}}) {
       nodes {
         gatsbyImageData(width: 90, placeholder: NONE)
       }
     }
   }
-  
   `);
   const image = getImage(data.allImageSharp.nodes[0]);
 
