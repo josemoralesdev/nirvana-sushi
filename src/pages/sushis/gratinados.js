@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { DishCard } from '../../components/dish-card.component';
 import { Decoration } from '../../components/title-decoration.component';
 import Text from '../../components/text.component';
+import Seo from '../../components/seo.component';
 
 const Gratinados = () => {
   const data = useStaticQuery(graphql`
@@ -39,8 +40,8 @@ const Gratinados = () => {
   }
   return (
     <>
+      <Seo title="Sushis Gratinados | Nirvana Sushi" />
       <Text variant="title">SUSHIS <Decoration>GRATINADOS</Decoration></Text>
-
       {RenderList()}
       <BackButton />
     </>

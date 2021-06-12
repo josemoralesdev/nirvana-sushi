@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { Decoration } from "../components/title-decoration.component"
 import Text from "../components/text.component"
+import Seo from "../components/seo.component"
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -50,6 +51,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <Seo title="Menu principal | Nirvana Sushi" />
       <HomeWrapper>
         <Text variant="title">~ MENU ~</Text>
         {RenderLinks()}

@@ -4,6 +4,7 @@ import { DishCard } from "../../components/dish-card.component"
 import { BackButton } from "../../components/back-button.component";
 import { Decoration } from "../../components/title-decoration.component";
 import Text from "../../components/text.component";
+import Seo from "../../components/seo.component";
 
 const Naturales = () => {
   const data = useStaticQuery(graphql`
@@ -31,6 +32,7 @@ const Naturales = () => {
   const naturalSushiList = Menu.SushisNaturales;
   return (
     <>
+      <Seo title="Sushis Naturales | Nirvana Sushi" />
       <Text variant="title">SUSHIS <Decoration>NATURALES</Decoration></Text>
       {naturalSushiList.map((sushi) => {
         return (
