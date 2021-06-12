@@ -5,11 +5,13 @@ import { ThemeProvider } from "styled-components"
 import { theme } from "../theme"
 import { GlobalStyle } from "../theme/globalStyles"
 import Header from './header.component'
+import Seo from './seo.component'
 
 export const Layout = ({ children }) => {
 
   return (
     <>
+      <Seo />
       <ThemeProvider theme={theme}>
         <Header />
         <GlobalStyle />
