@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/nirvana-sushi",
   siteMetadata: {
     title: "Nirvana",
     siteUrl: `https:localhost:8000`,
