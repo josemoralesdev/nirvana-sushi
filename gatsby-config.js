@@ -55,6 +55,22 @@ module.exports = {
         name: "logo",
         path: `./src/assets/logo/`
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://josemoralesdev.github.io/nirvana-sushi',
+        sitemap: 'https://josemoralesdev.github.io/nirvana-sushi/sitemap.xml',
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
     }
   ],
 };
