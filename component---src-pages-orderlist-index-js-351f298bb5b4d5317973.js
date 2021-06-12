@@ -1,0 +1,2 @@
+(self.webpackChunknirvana_sushi=self.webpackChunknirvana_sushi||[]).push([[132],{9896:function(n,e,r){"use strict";r.r(e);var s=r(7294);e.default=function(){return s.createElement(s.Fragment,null,"Work in progress")}}}]);
+//# sourceMappingURL=component---src-pages-orderlist-index-js-351f298bb5b4d5317973.js.map
