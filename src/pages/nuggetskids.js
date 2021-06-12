@@ -4,6 +4,7 @@ import { BackButton } from '../components/back-button.component';
 import { DishCard } from '../components/dish-card.component';
 import { Decoration } from '../components/title-decoration.component';
 import Text from '../components/text.component';
+import Seo from '../components/seo.component';
 
 const NuggetsKids = () => {
 
@@ -46,8 +47,9 @@ const NuggetsKids = () => {
   }
   return (
     <>
+      <Seo title="Nuggets Kids | Nirvana Sushi" />
       <Text variant="title">NUGGETS <Decoration>KIDS</Decoration></Text>
-      {RenderList()}
+      { RenderList()}
       <BackButton />
     </>
   )

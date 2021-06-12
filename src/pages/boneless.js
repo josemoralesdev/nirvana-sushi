@@ -5,6 +5,7 @@ import { DishCard } from '../components/dish-card.component';
 import { BackButton } from '../components/back-button.component';
 import { Decoration } from '../components/title-decoration.component';
 import Text from '../components/text.component';
+import Seo from '../components/seo.component';
 
 const Boneless = () => {
 
@@ -46,6 +47,7 @@ const Boneless = () => {
   }
   return (
     <>
+      <Seo title="Boneless | Nirvana Sushi" />
       <Text variant="title"><Decoration>BONELESS</Decoration></Text>
       {RenderList()}
       <BackButton />
