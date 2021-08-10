@@ -6,6 +6,7 @@ import { BackButton } from '../components/back-button.component';
 import { Decoration } from '../components/title-decoration.component';
 import Text from '../components/text.component';
 import Seo from '../components/seo.component';
+import { RenderList } from '../helpers/functions';
 
 const Boneless = () => {
 
@@ -36,21 +37,13 @@ const Boneless = () => {
   
   `);
   const bonelessList = data.allDataJson.nodes[0].Menu.Boneless;
-  const RenderList = () => {
-    return (
-      bonelessList.map((sushi) => {
-        return (
-          <DishCard key={sushi.nombre} dish={sushi} />
-        )
-      })
-    )
-  }
+  const ComponentList = RenderList(bonelessList, DishCard);
   return (
     <>
       <Seo title="Boneless | Nirvana Sushi" />
       <Text variant="title"><Decoration>BONELESS</Decoration></Text>
-      {RenderList()}
-      <BackButton />
+      {ComponentList}
+      <BackButton isCentered />
     </>
   )
 }

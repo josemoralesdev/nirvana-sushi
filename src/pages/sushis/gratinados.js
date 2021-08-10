@@ -5,6 +5,7 @@ import { DishCard } from '../../components/dish-card.component';
 import { Decoration } from '../../components/title-decoration.component';
 import Text from '../../components/text.component';
 import Seo from '../../components/seo.component';
+import { RenderList } from '../../helpers/functions';
 
 const Gratinados = () => {
   const data = useStaticQuery(graphql`
@@ -29,21 +30,13 @@ const Gratinados = () => {
   }
   `);
   const gratinatedSushiList = data.allDataJson.nodes[0].Menu.SushisGratinados;
-  const RenderList = () => {
-    return (
-      gratinatedSushiList.map((sushi) => {
-        return (
-          <DishCard key={sushi.nombre} dish={sushi} />
-        )
-      })
-    )
-  }
+  const ComponentList = RenderList(gratinatedSushiList, DishCard);
   return (
     <>
       <Seo title="Sushis Gratinados | Nirvana Sushi" />
       <Text variant="title">SUSHIS <Decoration>GRATINADOS</Decoration></Text>
-      {RenderList()}
-      <BackButton />
+      {ComponentList}
+      <BackButton isCentered />
     </>
   )
 }

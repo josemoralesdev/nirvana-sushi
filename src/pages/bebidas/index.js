@@ -5,6 +5,7 @@ import { DishCard } from '../../components/dish-card.component';
 import { Decoration } from '../../components/title-decoration.component';
 import Text from '../../components/text.component';
 import Seo from '../../components/seo.component';
+import { RenderList } from '../../helpers/functions';
 
 const Bebidas = () => {
 
@@ -40,24 +41,16 @@ const Bebidas = () => {
   const { Menu } = data.allDataJson.nodes[0];
   const drinksList = Menu.Bebidas;
   const title = Object.keys(Menu).toString().toUpperCase();
+  const ComponentList = RenderList(drinksList, DishCard);
 
-  const RenderList = () => {
-    return (
-      drinksList.map((drink) => {
-        return (
-          <DishCard key={drink.nombre} dish={drink} />
-        )
-      })
-    )
-  }
   return (
     <>
       <Seo title="Bebidas | Nirvana Sushi" />
       <Text variant="title">
         <Decoration>{title}</Decoration>
       </Text>
-      { RenderList()}
-      <BackButton />
+      {ComponentList}
+      <BackButton isCentered />
     </>
   )
 }

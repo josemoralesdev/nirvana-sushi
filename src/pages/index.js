@@ -48,7 +48,6 @@ const IndexPage = () => {
     )
   };
 
-
   return (
     <>
       <Seo title="Menu principal | Nirvana Sushi" />

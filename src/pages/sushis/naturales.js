@@ -5,6 +5,7 @@ import { BackButton } from "../../components/back-button.component";
 import { Decoration } from "../../components/title-decoration.component";
 import Text from "../../components/text.component";
 import Seo from "../../components/seo.component";
+import { RenderList } from "../../helpers/functions";
 
 const Naturales = () => {
   const data = useStaticQuery(graphql`
@@ -30,16 +31,13 @@ const Naturales = () => {
   `);
   const { Menu } = data.allDataJson.nodes[0]
   const naturalSushiList = Menu.SushisNaturales;
+  const ComponentList = RenderList(naturalSushiList, DishCard);
   return (
     <>
       <Seo title="Sushis Naturales | Nirvana Sushi" />
       <Text variant="title">SUSHIS <Decoration>NATURALES</Decoration></Text>
-      {naturalSushiList.map((sushi) => {
-        return (
-          <DishCard key={sushi.nombre} dish={sushi} />
-        )
-      })}
-      <BackButton />
+      {ComponentList}
+      <BackButton isCentered />
     </>
   )
 }

@@ -5,6 +5,7 @@ import { DishCard } from '../components/dish-card.component';
 import { Decoration } from '../components/title-decoration.component';
 import Text from '../components/text.component';
 import Seo from '../components/seo.component';
+import { RenderList } from '../helpers/functions';
 
 const NuggetsKids = () => {
 
@@ -36,21 +37,13 @@ const NuggetsKids = () => {
   `);
   const { Menu } = data.allDataJson.nodes[0];
   const nuggetsList = Menu.Nuggets_Kids;
-  const RenderList = () => {
-    return (
-      nuggetsList.map((sushi) => {
-        return (
-          <DishCard key={sushi.nombre} dish={sushi} />
-        )
-      })
-    )
-  }
+  const ComponentList = RenderList(nuggetsList, DishCard);
   return (
     <>
       <Seo title="Nuggets Kids | Nirvana Sushi" />
       <Text variant="title">NUGGETS <Decoration>KIDS</Decoration></Text>
-      { RenderList()}
-      <BackButton />
+      {ComponentList}
+      <BackButton isCentered />
     </>
   )
 }
