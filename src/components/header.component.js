@@ -190,26 +190,25 @@ export default function Header() {
             <GatsbyImage image={image} alt="logo" />
           </Link>
           <Nav>
-            <LinkList isOpen={isOpen} onClick={toggleClicked}>
+            <LinkList isOpen={isOpen}>
               <LinkWrapper>
-                <LinkItem>
+                <LinkItem onClick={toggleClicked}>
                   <Text variant="title">
                     <GatsbyLink to="/">
                       Menú
-                  </GatsbyLink>
+                    </GatsbyLink>
                   </Text>
                 </LinkItem>
-                <LinkItem>
+                <LinkItem onClick={toggleClicked}>
                   <Text variant="title">
                     <GatsbyLink to="/orderlist">
                       Lista de Órdenes
-                  </GatsbyLink>
+                    </GatsbyLink>
                   </Text>
                 </LinkItem>
               </LinkWrapper>
               <SocialLinksRow>
                 <SocialWrapper>
-
                   {Data.Social.map(({ name, link }) => {
                     return (
                       <AnchorLink href={link} target="_blank" rel="noreferrer" key={`link-${name}`}>
@@ -224,7 +223,7 @@ export default function Header() {
               </Address>
             </LinkList>
           </Nav>
-          <MenuButton onClick={toggleClicked} aria-label="Navigtion Button">
+          <MenuButton onClick={toggleClicked} aria-label="Navigation Button">
             <HamMenu isOpen={isOpen}>
               <div></div>
             </HamMenu>
