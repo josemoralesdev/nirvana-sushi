@@ -45,7 +45,7 @@ height: 250px;
 }
 `;
 
-export const DishCard = ({ dish = {} }) => {
+export const DishCard = (dish = {}) => {
   const { nombre, precio, descripcion, imagen } = dish;
   const image = getImage(imagen);
   return (
