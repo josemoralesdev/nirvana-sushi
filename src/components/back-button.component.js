@@ -5,8 +5,8 @@ import Text from './text.component';
 
 const Back = styled.button`
   all: unset;
-  display: ${({ isCentered }) => isCentered ? "block" : null};
-  margin: ${({ isCentered }) => isCentered ? "0 auto" : null};
+  display: ${({ isCentered }) => isCentered && "block"};
+  margin: ${({ isCentered }) => isCentered && "0 auto"};
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -15,11 +15,11 @@ const StyledLink = styled(Link)`
 
 export const BackButton = ({ isCentered = false }) => {
   return (
-    <Back isCentered>
+    <Back isCentered={isCentered}>
       <StyledLink to="/">
         <Text variant="button">
           ATRAS
-         </Text>
+        </Text>
       </StyledLink>
     </Back>
   )
